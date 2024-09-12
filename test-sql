@@ -1,1 +1,0 @@
-select * from {{ ref('src_ads_facebook_all_data')}}
