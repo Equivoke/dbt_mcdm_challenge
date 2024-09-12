@@ -21,10 +21,10 @@ Below is a brief description of how to add a new data source to MCDM:
 To add a new data source:
 
 1. Add the new data into the "seeds" folder.
-2. Run the dbt seed command in dbt.
-3. Modify "aggregated_metrics.sql" by uncommenting rows 43-52.
+2. Run the "dbt seed" command in dbt.
+3. In "models" folder modify "aggregated_metrics.sql" by uncommenting rows 43-52.
 4. Change 'New_channel' to the desired source name.
-5. Provide the correct formulas to calculate each metric in rows 48-51 (based on how the columns in the new data source are named).
+5. Provide the correct formulas to calculate each metric in rows 48-51 (based on how the columns in the new data source are named or based on business rules).
 6. In row 52, change "new_data_source_name" to the actual data source name.
 
 If you need to add more than one data source, repeat steps 1-6, adjusting for the relevant row numbers.
