@@ -17,7 +17,6 @@ Imagine that MCDM-model behind dashboard, is lost somehow. You need to rebuilt i
 The link to the dbt Cloud repository and the recreated dashboard was submitted via the provided Typeform.
 
 Below is a brief description of how to add a new data source to MCDM:
-
 To add a new data source:
 
 1. Add the new data into the "seeds" folder.
