@@ -1,5 +1,4 @@
 # Marketing common data modelling challenge
-	This test assignment was completed by Nikita Alekseev
 
 ## Task
 	At Improvado, we use marketing common data models (MCDM) to map data from various ad 
