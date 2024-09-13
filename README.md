@@ -17,13 +17,20 @@ Imagine that MCDM-model behind dashboard, is lost somehow. You need to rebuilt i
 The link to the dbt Cloud repository and the recreated dashboard was submitted via the provided Typeform.
 
 Below is a brief description of how to add a new data source to MCDM:
+
+- chnl - ad platform name
+- cpe - cost per engagement
+- cc - conversion cost
+- ibc - impressions by channel
+- cpc - cost per click
+
 To add a new data source:
 
 1. Add the new data into the "seeds" folder.
 2. Run the "dbt seed" command in dbt.
-3. In "models" folder modify "aggregated_metrics.sql" by uncommenting rows 43-52.
+3. In "models" folder modify "aggregated_metrics.sql" by uncommenting rows 43-53.
 4. Change 'New_channel' to the desired source name.
 5. Provide the correct formulas to calculate each metric in rows 48-51 (based on how the columns in the new data source are named or based on business rules).
-6. In row 52, change "new_data_source_name" to the actual data source name.
+6. In row 52, add "from {{ ref('new_data_source_name') }}" where 'new_data_source_name' should be actual data source name, you've added at step 1.
 
 If you need to add more than one data source, repeat steps 1-6, adjusting for the relevant row numbers.

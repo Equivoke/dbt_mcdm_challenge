@@ -49,5 +49,5 @@ select
   0 as cc,
   0 as ibc,
   0 as cpc
-from {{ ref('new_data_source_name') }}
+
 */
