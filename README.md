@@ -31,5 +31,6 @@ To add a new data source:
 4. Change 'New_channel' to the desired source name.
 5. Provide the correct formulas to calculate each metric in rows 48-51 (based on how the columns in the new data source are named or based on business rules).
 6. In row 52, add "from {{ ref('new_data_source_name') }}" where 'new_data_source_name' should be actual data source name, you've added at step 1.
+7. Run "dbt run --models aggregated_metrics"
 
 If you need to add more than one data source, repeat steps 1-6, adjusting for the relevant row numbers.
